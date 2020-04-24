@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:App220"
+             mc:Ignorable="d"
+             x:Class="App220.MainPage">
+
+    <ContentPage.Resources>
+        <local:EmbeddedToImageSourceConverter x:Key="converter"/>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Image Source="{Binding imageName, Converter={StaticResource converter}, ConverterParameter='App220'}"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+    </StackLayout>
+
+</ContentPage>
